@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<module codename="org.botbeans.control">
-    <module_version install_time="1310735843488" last="true" origin="installer" specification_version="1.0">
-        <file crc="466086369" name="config/Modules/org-botbeans-control.xml"/>
-        <file crc="2548271629" name="modules/ext/swingx-core-1.6.2.jar"/>
-        <file crc="239507793" name="modules/org-botbeans-control.jar"/>
-    </module_version>
-</module>
