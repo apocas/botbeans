@@ -1,0 +1,105 @@
+<project name="ISCTELego" default="uploadandrun">
+    <description>
+    	Sample build file
+    </description>
+
+  <property file="nxj.properties"/>
+  <property name="src" location="."/>
+  <basename property="program" file="Main"/>
+  <property name="binary" value="${program}.nxj" />
+	
+  <property name="nxj.home" value="/Users/pedrodias/lejos_nxj/" />
+	
+	<property name="nxj.classes.home" value="${nxj.home}" />
+	<property name="nxj.jtools.home" value="${nxj.home}" />
+	<property name="nxj.pctools.home" value="${nxj.home}" />
+	<property name="nxj.pccomm.home" value="${nxj.home}" />
+	<property name="nxj.library.path" value="${nxj.home}/bin" />
+	<property name="nxj.classes.jar" value="${nxj.classes.home}/lib/classes.jar" />
+	<property name="nxj.jtools.jar" value="${nxj.jtools.home}/lib/jtools.jar" />
+	<property name="nxj.pctools.jar" value="${nxj.pctools.home}/lib/pctools.jar" />
+	<property name="nxj.pccomm.jar" value="${nxj.pccomm.home}/lib/pccomm.jar" />
+	<property name="nxj.commons.jar" value="${nxj.jtools.home}/3rdparty/lib/commons-cli.jar" />
+	<property name="nxj.bcel.jar" value="${nxj.jtools.home}/3rdparty/lib/bcel.jar" />
+	<property name="nxj.bluecove.jar" value="${nxj.pccomm.home}/3rdparty/lib/bluecove.jar" />
+	<property name="nxj.bluecove-gpl.jar" value="${nxj.pccomm.home}/3rdparty/lib/bluecove-gpl.jar" />
+	
+  <!-- deletes class files -->
+  <target name="clean" description="clean up all generated files">
+    <delete>
+      <fileset dir="."> 
+        <include name="**/*.class"/>
+      </fileset>
+     </delete>
+  </target>
+
+  <target name="compile" depends="clean"
+        description="compile the source" >
+    <!-- Compile the java code from ${src}  -->
+    <javac srcdir="${src}" destdir="${src}">
+      <bootclasspath>
+        <pathelement location="${nxj.classes.jar}"/>
+       </bootclasspath>
+    </javac>
+  </target>
+
+  <target name="link" depends="compile"
+        description="link the binary" >
+    <!-- Link the binary and create a signature file -->
+    <java classname="js.tinyvm.TinyVM">
+      <arg value="--bootclasspath"/>
+      <arg path="${nxj.classes.jar}" /> 
+      <arg value="--classpath"/>
+      <arg path="." /> 
+      <arg value="--writeorder" />
+      <arg value="LE" />
+      <arg value="${program}"/>
+      <arg value="-o"/>
+      <arg value="./${binary}"/>
+      <arg value="-v"/>
+      <classpath>
+        <pathelement location="${nxj.jtools.jar}"/>
+  		<pathelement location="${nxj.commons.jar}"/>
+  		<pathelement location="${nxj.bcel.jar}"/>
+      </classpath>
+    </java>
+  </target>
+	
+  <target name="upload" depends="link"
+        description="upload the binary" >
+    <java classname="lejos.pc.tools.NXJUpload" fork="true">
+      <jvmarg value="-Djava.library.path=${nxj.library.path}"/>
+      <jvmarg value="-Dnxj.home=${nxj.home}"/>
+      <arg value="${binary}"/>
+      <classpath>
+        <pathelement location="${nxj.jtools.jar}"/>
+        <pathelement location="${nxj.pctools.jar}"/>
+      	<pathelement location="${nxj.pccomm.jar}"/>
+  		<pathelement location="${nxj.commons.jar}"/>
+  		<pathelement location="${nxj.bcel.jar}"/>
+      	<pathelement location="${nxj.bluecove.jar}"/>
+      	<pathelement location="${nxj.bluecove-gpl.jar}"/>
+      </classpath>
+    </java>
+  </target>
+	
+  <target name="uploadandrun" depends="link"
+        description="upload and run the binary" >
+    <java classname="lejos.pc.tools.NXJUpload" fork="true">
+  	  <jvmarg value="-d32"/>
+      <jvmarg value="-Djava.library.path=${nxj.library.path}"/>
+      <jvmarg value="-Dnxj.home=${nxj.home}"/>
+      <arg value="${binary}"/>
+      <arg value="-r"/>
+      <classpath>
+        <pathelement location="${nxj.jtools.jar}"/>
+        <pathelement location="${nxj.pctools.jar}"/>
+      	<pathelement location="${nxj.pccomm.jar}"/>
+  		<pathelement location="${nxj.commons.jar}"/>
+  		<pathelement location="${nxj.bcel.jar}"/>
+      	<pathelement location="${nxj.bluecove.jar}"/>
+      	<pathelement location="${nxj.bluecove-gpl.jar}"/>
+      </classpath>
+    </java>
+  </target>
+</project>

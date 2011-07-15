@@ -1,2 +1,16 @@
-*.classnbproject/private/*~*.lock*.DS_Store*.swp*.out
+*.class
+nbproject/private/
+*~
+*.lock
+*.DS_Store
+*.swp
+*.out
 *.svn
+/BotBeans/build/
+/BotBeans/Bot Blocks/build/
+/BotBeans/Bot Control/build/
+/BotBeans/Bot Common/build/
+/BotBeans/Bot Shapes/build/
+/BotBeans/TableLayout/build/
+/BotBeans/jfreechart/build/
+/BotBeans/jcommon/build/
