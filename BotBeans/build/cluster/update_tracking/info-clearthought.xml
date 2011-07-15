@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module codename="info.clearthought">
+    <module_version install_time="1310735839303" last="true" origin="installer" specification_version="1.0">
+        <file crc="3894104212" name="config/Modules/info-clearthought.xml"/>
+        <file crc="473041587" name="modules/ext/TableLayout.jar"/>
+        <file crc="1479413055" name="modules/info-clearthought.jar"/>
+    </module_version>
+</module>

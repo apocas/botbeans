@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://www.netbeans.org/ns/project/1">
+    <type>org.netbeans.modules.apisupport.project</type>
+    <configuration>
+        <data xmlns="http://www.netbeans.org/ns/nb-module-project/3">
+            <code-name-base>bluecove</code-name-base>
+            <suite-component/>
+            <module-dependencies/>
+            <public-packages>
+                <package>com.ibm.oti.connection.btgoep</package>
+                <package>com.ibm.oti.connection.btl2cap</package>
+                <package>com.ibm.oti.connection.btspp</package>
+                <package>com.ibm.oti.connection.tcpobex</package>
+                <package>com.intel.bluetooth</package>
+                <package>com.intel.bluetooth.btgoep</package>
+                <package>com.intel.bluetooth.btl2cap</package>
+                <package>com.intel.bluetooth.btspp</package>
+                <package>com.intel.bluetooth.gcf.socket</package>
+                <package>com.intel.bluetooth.obex</package>
+                <package>com.intel.bluetooth.tcpobex</package>
+                <package>com.sun.cdc.io.j2me.btgoep</package>
+                <package>com.sun.cdc.io.j2me.btl2cap</package>
+                <package>com.sun.cdc.io.j2me.btspp</package>
+                <package>com.sun.cdc.io.j2me.tcpobex</package>
+                <package>com.sun.midp.io.j2me.btgoep</package>
+                <package>com.sun.midp.io.j2me.btl2cap</package>
+                <package>com.sun.midp.io.j2me.btspp</package>
+                <package>com.sun.midp.io.j2me.tcpobex</package>
+                <package>javax.bluetooth</package>
+                <package>javax.microedition.io</package>
+                <package>javax.obex</package>
+            </public-packages>
+            <class-path-extension>
+                <runtime-relative-path>ext/bluecove-gpl-2.1.1-SNAPSHOT.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/bluecove-gpl-2.1.1-SNAPSHOT.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/bluecove-2.1.1-SNAPSHOT.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/bluecove-2.1.1-SNAPSHOT.jar</binary-origin>
+            </class-path-extension>
+        </data>
+    </configuration>
+</project>

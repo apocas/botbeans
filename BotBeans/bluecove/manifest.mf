@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+OpenIDE-Module: bluecove
+OpenIDE-Module-Localizing-Bundle: bluecove/Bundle.properties
+OpenIDE-Module-Specification-Version: 1.0
+

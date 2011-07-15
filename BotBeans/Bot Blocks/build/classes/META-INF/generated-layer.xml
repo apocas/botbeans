@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE filesystem PUBLIC "-//NetBeans//DTD Filesystem 1.2//EN"
+                            "http://www.netbeans.org/dtds/filesystem-1_2.dtd">
+<filesystem>
+    <folder name="xml">
+        <folder name="entities">
+            <folder name="org_botbeans_blocks">
+                <file name="Blocks" url="nbres:/org/netbeans/modules/settings/resources/properties-1_0.dtd">
+                    <!--org.botbeans.blocks.BlocksTopComponent-->
+                    <attr name="hint.originalPublicID" stringvalue="-//org.botbeans.blocks//Blocks//EN"/>
+                </file>
+            </folder>
+        </folder>
+        <folder name="memory">
+            <folder name="org">
+                <folder name="botbeans">
+                    <folder name="blocks">
+                        <file name="BlocksTopComponent">
+                            <!--org.botbeans.blocks.BlocksTopComponent-->
+                            <attr name="settings.providerPath" stringvalue="xml/lookups//org_botbeans_blocks/Blocks.instance"/>
+                        </file>
+                    </folder>
+                </folder>
+            </folder>
+        </folder>
+        <folder name="lookups">
+            <folder name="org_botbeans_blocks">
+                <file name="Blocks.instance">
+                    <!--org.botbeans.blocks.BlocksTopComponent-->
+                    <attr
+                        methodvalue="org.netbeans.api.settings.Factory.create" name="instanceCreate"/>
+                    <attr
+                        methodvalue="org.netbeans.api.settings.Factory.properties" name="settings.convertor"/>
+                    <attr name="settings.instanceClass" stringvalue="org.botbeans.blocks.BlocksTopComponent"/>
+                    <attr name="settings.instanceOf" stringvalue="org.botbeans.blocks.BlocksTopComponent"/>
+                    <attr boolvalue="true" name="xmlproperties.preventStoring"/>
+                </file>
+            </folder>
+        </folder>
+    </folder>
+</filesystem>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module codename="org.botbeans.blocks">
+    <module_version install_time="1310735849734" last="true" origin="installer" specification_version="1.0">
+        <file crc="896823849" name="config/Modules/org-botbeans-blocks.xml"/>
+        <file crc="3337141445" name="modules/org-botbeans-blocks.jar"/>
+    </module_version>
+</module>
