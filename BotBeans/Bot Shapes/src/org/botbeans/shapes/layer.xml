@@ -25,13 +25,6 @@
             <file name="org-botbeans-shapes-Liga.instance"/>
             <file name="org-botbeans-shapes-Novo.instance"/>
         </folder>
-        <folder name="Window">
-            <file name="org-botbeans-shapes-MemoriaAction.instance">
-                <attr name="component" methodvalue="org.botbeans.shapes.MemoriaTopComponent.findInstance"/>
-                <attr name="displayName" bundlevalue="org.botbeans.shapes.Bundle#CTL_MemoriaAction"/>
-                <attr name="instanceCreate" methodvalue="org.openide.windows.TopComponent.openAction"/>
-            </file>
-        </folder>
     </folder>
     <folder name="Menu">
         <folder name="File">
@@ -72,9 +65,105 @@
         <folder name="Window">
             <file name="DocumentsAction.shadow_hidden"/>
             <file name="MaximizeWindowAction.shadow_hidden"/>
-            <file name="MemoriaAction.shadow">
-                <attr name="originalFile" stringvalue="Actions/Window/org-botbeans-shapes-MemoriaAction.instance"/>
+            <file name="ProgressListAction.shadow_hidden"/>
+            <file name="Separator5.instance_hidden"/>
+            <file name="SwitchToRecentDocumentAction.shadow_hidden"/>
+            <file name="org-botbeans-core-actions-GlobalPropertiesAction.shadow_hidden"/>
+            <file name="org-botbeans-core-windows-actions-ResetWindowsAction.instance_hidden"/>
+            <file name="org-botbeans-core-windows-actions-UndockAction.shadow_hidden"/>
+        </folder>
+    </folder>
+    
+    
+    <folder name="Ribbon">
+        <folder name="AppMenu">
+            <file name="org-botbeans-shapes-Abrir.shadow">
+                <attr name="originalFile" stringvalue="Actions/Edit/org-botbeans-shapes-Abrir.instance"/>
+                <attr name="position" intvalue="100"/>
             </file>
+            <file name="org-openide-actions-SaveAction.shadow">
+                <attr name="originalFile" stringvalue="Actions/System/org-openide-actions-SaveAction.instance"/>
+                <attr name="position" intvalue="-300"/>
+            </file>
+            <file name="org-botbeans-shapes-Novo.shadow">
+                <attr name="originalFile" stringvalue="Actions/Edit/org-botbeans-shapes-Novo.instance"/>
+                <attr name="position" intvalue="-100"/>
+            </file>
+            <file name="org-botbeans-shapes-Liga.shadow">
+                <attr name="originalFile" stringvalue="Actions/Edit/org-botbeans-shapes-Liga.instance"/>
+                <attr name="position" intvalue="-100"/>
+            </file>
+            
+            <folder name="Window">
+                <attr name="position" intvalue="200"/>
+                <attr name="iconBase" stringvalue="org/netbeans/paint/resources/Print.png"/>
+                <folder name="Windows">                    
+                    <file name="org-botbeans-shapes-MemoryAction.instance">
+                        <attr name="component" methodvalue="org.botbeans.shapes.MemoryTopComponent.findInstance"/>
+                        <attr name="displayName" bundlevalue="org.botbeans.shapes.Bundle#CTL_MemoryAction"/>
+                        <attr name="instanceCreate" methodvalue="org.openide.windows.TopComponent.openAction"/>
+                    </file>
+                </folder>
+            </folder>
+
+        </folder>
+        
+        <folder name="AppMenuFooter">
+            <file name="org-botbeans-core-actions-SystemExit.shadow">
+                <attr name="originalFile" stringvalue="Actions/File/org-botbeans-core-actions-SystemExit.instance"/>
+                <attr name="position" intvalue="100"/>
+            </file>
+            <file name="org-botbeans-shapes-ConfigurationAction.shadow">
+                <attr name="originalFile" stringvalue="Actions/Edit/org-botbeans-shapes-ConfigurationAction.instance"/>
+                <attr name="position" intvalue="200"/>
+            </file>
+        </folder>
+        
+        <folder name="TaskBar">
+            <file name="org-botbeans-shapes-Novo.shadow">
+                <attr name="originalFile" stringvalue="Actions/Edit/org-botbeans-shapes-Novo.instance"/>
+                <attr name="position" intvalue="-100"/>
+            </file>
+            <file name="org-botbeans-shapes-Abrir.shadow">
+                <attr name="originalFile" stringvalue="Actions/Edit/org-botbeans-shapes-Abrir.instance"/>
+                <attr name="position" intvalue="100"/>
+            </file>
+            <file name="org-openide-actions-SaveAction.shadow">
+                <attr name="originalFile" stringvalue="Actions/System/org-openide-actions-SaveAction.instance"/>
+                <attr name="position" intvalue="-300"/>
+            </file>
+        </folder>
+        
+        <folder name="TaskPanes">
+            <folder name="Main">
+                <folder name="Execution">
+                    <file name="org-botbeans-shapes-Bottao_run.shadow">
+                        <attr name="originalFile" stringvalue="Actions/Edit/org-botbeans-shapes-Bottao_run.instance"/>
+                        <attr name="position" intvalue="-45"/>
+                    </file>
+                    <file name="org-botbeans-shapes-Bottao_stop.shadow">
+                        <attr name="originalFile" stringvalue="Actions/Edit/org-botbeans-shapes-Bottao_stop.instance"/>
+                        <attr name="position" intvalue="-40"/>
+                    </file>
+                </folder>
+                <folder name="Edit">
+                    <file name="org-botbeans-shapes-DeleteAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/Edit/org-botbeans-shapes-DeleteAction.instance"/>
+                        <attr name="position" intvalue="-950"/>
+                    </file>
+                </folder>
+            </folder>
+        </folder>
+        
+        <folder name="HelpButton">
+            <file name="org-netbeans-core-actions-AboutAction.instance">
+                <attr name="iconBase" stringvalue="org/botbeans/shapes/icons/help.png"/>
+            </file>
+        </folder>
+        
+        <folder name="Window">
+            <file name="DocumentsAction.shadow_hidden"/>
+            <file name="MaximizeWindowAction.shadow_hidden"/>
             <file name="ProgressListAction.shadow_hidden"/>
             <file name="Separator5.instance_hidden"/>
             <file name="SwitchToRecentDocumentAction.shadow_hidden"/>
@@ -143,14 +232,9 @@
 
     <folder name="Windows2">
         <folder name="Components">
-            <file name="MemoriaTopComponent.settings" url="MemoriaTopComponentSettings.xml"/>
             <file name="Welcome.settings" url="Welcome.settings"/>
         </folder>
         <folder name="Modes">
-            <folder name="properties">
-                <file name="MemoriaTopComponent.wstcref" url="MemoriaTopComponentWstcref.xml"/>
-               
-            </folder>
             <folder name="editor">
                 <file name="Welcome.wstcref" url="Welcome.wstcref"/>
             </folder>
