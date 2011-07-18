@@ -3,6 +3,10 @@ package org.botbeans.shapes;
 import java.util.Set;
 import org.botbeans.control.ServerTopComponent;
 import org.botbeans.shapes.utilities.ShapesUtilities;
+import org.openide.awt.ActionID;
+import org.openide.awt.ActionReference;
+import org.openide.awt.ActionReferences;
+import org.openide.awt.ActionRegistration;
 import org.openide.util.HelpCtx;
 import org.openide.util.NbBundle;
 import org.openide.util.actions.CallableSystemAction;
@@ -10,6 +14,12 @@ import org.openide.windows.Mode;
 import org.openide.windows.TopComponent;
 import org.openide.windows.WindowManager;
 
+@ActionID(id = "org.botbeans.shapes.Liga", category = "Edit")
+@ActionRegistration(displayName = "CTL_Liga")
+@ActionReferences(value = {
+    @ActionReference(path = "Ribbon/AppMenu", position = -100),
+    @ActionReference(path = "Ribbon/TaskBar", position = 100),
+    @ActionReference(path = "Toolbars/Network", position = -100)})
 public final class Liga extends CallableSystemAction {
 
     public void performAction() {

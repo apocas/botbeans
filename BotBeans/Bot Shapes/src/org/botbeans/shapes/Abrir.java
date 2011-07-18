@@ -5,12 +5,24 @@
 package org.botbeans.shapes;
 
 import org.botbeans.shapes.utilities.ShapesUtilities;
+import org.openide.awt.ActionRegistration;
+import org.openide.awt.ActionReference;
+import org.openide.awt.ActionReferences;
+import org.openide.awt.ActionID;
 import org.openide.util.HelpCtx;
 import org.openide.util.NbBundle;
 import org.openide.util.actions.CallableSystemAction;
 
+@ActionID(id = "org.botbeans.shapes.Abrir", category = "Edit")
+@ActionRegistration(displayName = "CTL_Abrir")
+@ActionReferences(value = {
+    @ActionReference(path = "Menu/File", position = 100),
+    @ActionReference(path = "Ribbon/AppMenu", position = -100),
+    @ActionReference(path = "Ribbon/TaskBar", position = 100),
+    @ActionReference(path = "Toolbars/Ficheiro", position = -250)})
 public final class Abrir extends CallableSystemAction {
 
+    @Override
     public void performAction() {
         ShapeTopComponent tc = new ShapeTopComponent();
         if (tc.abre() == -1) {

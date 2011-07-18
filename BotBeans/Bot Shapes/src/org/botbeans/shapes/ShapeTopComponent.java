@@ -50,6 +50,7 @@ import org.botbeans.shapes.nodes.VariableNode;
 import org.botbeans.shapes.palette.CategoryChildFactory;
 import org.botbeans.shapes.palette.Shape;
 import org.botbeans.shapes.utilities.ShapesUtilities;
+import org.netbeans.api.settings.ConvertAsProperties;
 import org.netbeans.spi.palette.PaletteActions;
 import org.netbeans.spi.palette.PaletteController;
 import org.netbeans.spi.palette.PaletteFactory;
@@ -57,6 +58,8 @@ import org.openide.DialogDisplayer;
 import org.openide.NotifyDescriptor;
 import org.openide.NotifyDescriptor.Confirmation;
 import org.openide.NotifyDescriptor.Message;
+import org.openide.awt.ActionID;
+import org.openide.awt.ActionReference;
 import org.openide.cookies.SaveCookie;
 import org.openide.nodes.AbstractNode;
 import org.openide.nodes.Children;
@@ -76,10 +79,29 @@ import org.openide.windows.WindowManager;
  * Topcomponent
  * @author Apocas
  */
+@ConvertAsProperties(dtd = "-//org.botbeans.shapes//Memory//EN",
+autostore = false)
+@TopComponent.Description(preferredID = "ShapeTopComponent",
+iconBase = "org/botbeans/shapes/icons/Computer_File_053.gif",
+persistenceType = TopComponent.PERSISTENCE_NEVER)
+@TopComponent.Registration(mode = "editor", openAtStartup = true)
+@ActionID(category = "Window", id = "org.botbeans.shapes.ShapeTopComponent")
+@TopComponent.OpenActionRegistration(displayName = "#CTL_ShapeTopComponent",
+preferredID = "ShapeTopComponent")
 public class ShapeTopComponent extends TopComponent implements Runnable, LookupListener, Serializable {
 
     private final PaletteController pc;
     private boolean used = false;
+    private GenericNode selecionado;
+    private GenericNode old;
+
+    void writeProperties(java.util.Properties p) {
+        p.setProperty("version", "1.0");
+    }
+
+    void readProperties(java.util.Properties p) {
+        String version = p.getProperty("version");
+    }
 
     /**
      * @return the pc
@@ -119,7 +141,6 @@ public class ShapeTopComponent extends TopComponent implements Runnable, LookupL
             return false;
         }
     }
-    
     int flag;
     private Socket clientSocket;
     private JComponent myView;
@@ -133,7 +154,6 @@ public class ShapeTopComponent extends TopComponent implements Runnable, LookupL
     private JFileChooser chooser;
     private DataOutputStream out;
     private DataInputStream in;
-    //private Hashtable memory_logic;
     private HashMap memory;
     private final InstanceContent content;
     private SaveCookieImpl savenode;
@@ -160,7 +180,6 @@ public class ShapeTopComponent extends TopComponent implements Runnable, LookupL
 
         savenode = new SaveCookieImpl();
 
-        //PaletteController pc = PaletteSupport.createPalette();
         pc = PaletteFactory.createPalette(new AbstractNode(Children.create(new CategoryChildFactory(), true)), new PaletteActions() {
 
             @Override
@@ -189,32 +208,9 @@ public class ShapeTopComponent extends TopComponent implements Runnable, LookupL
             }
         });
 
-        //associateLookup(Lookups.fixed(new Object[]{pc}));
-        //associateLookup(new ProxyLookup(Lookups.fixed(new Object[]{content})));
         associateLookup(new AbstractLookup(content));
         content.add(savenode);
         content.add(pc);
-
-        /*
-        AbstractNode c = pc.getRoot().lookup(AbstractNode.class);
-        Children ch = c.getChildren();
-        
-        final Shape item = new Shape();
-        item.setCategory(ShapesUtilities.categories[5]);
-        item.setImage(ShapesUtilities.items[17][2]);
-        item.setTitle("Function");
-        AbstractNode node = new AbstractNode(Children.LEAF) {
-        
-        @Override
-        public Transferable drag() throws IOException {
-        return item;
-        }
-        };
-        node.setName("Function");
-        node.setIconBaseWithExtension(ShapesUtilities.items[17][2]);
-        ((AbstractNode) ch.getNodes()[5]).getChildren().add(new Node[]{node});
-         */
-
 
         connected = false;
 
@@ -223,6 +219,10 @@ public class ShapeTopComponent extends TopComponent implements Runnable, LookupL
         filter.setDescription("Projecto BotBeans");
         chooser = new JFileChooser();
         chooser.setFileFilter(filter);
+
+
+        this.getScene().addStartStop();
+        ShapesUtilities.updateBlocks();
     }
 
     @Override
@@ -250,13 +250,6 @@ public class ShapeTopComponent extends TopComponent implements Runnable, LookupL
         ((AbstractNode) ch.getNodes()[5]).getChildren().remove(((AbstractNode) ch.getNodes()[5]).getChildren().getNodes());
     }
 
-    /*
-    public void mergeMemory(Hashtable m) {
-    Hashtable aux = new Hashtable();
-    aux.putAll(m);
-    aux.putAll(memory);
-    memory = aux;
-    }*/
     public static ArrayList<String> getProjectNames() {
         ArrayList<String> names = new ArrayList<String>();
 
@@ -342,11 +335,7 @@ public class ShapeTopComponent extends TopComponent implements Runnable, LookupL
     private class SaveCookieImpl implements SaveCookie {
 
         public void save() throws IOException {
-            //Confirmation msg = new NotifyDescriptor.Confirmation("Do you want to save?", NotifyDescriptor.OK_CANCEL_OPTION, NotifyDescriptor.QUESTION_MESSAGE);
-            //Object result = DialogDisplayer.getDefault().notify(msg);
-            //if (NotifyDescriptor.YES_OPTION.equals(result)) {
             guarda();
-            //}
         }
     }
 
@@ -375,6 +364,7 @@ public class ShapeTopComponent extends TopComponent implements Runnable, LookupL
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         org.openide.awt.Mnemonics.setLocalizedText(jLabel1, "Project name:");
 
         org.jdesktop.layout.GroupLayout jPanel1Layout = new org.jdesktop.layout.GroupLayout(jPanel1);
@@ -382,18 +372,19 @@ public class ShapeTopComponent extends TopComponent implements Runnable, LookupL
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(410, Short.MAX_VALUE)
+                .addContainerGap(382, Short.MAX_VALUE)
                 .add(jLabel1)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(project_name, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 164, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(project_name, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 164, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(jPanel1Layout.createSequentialGroup()
                 .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(project_name, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jLabel1))
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .add(jLabel1)
+                    .add(project_name, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE))
+                .add(7, 7, 7))
         );
 
         add(jPanel1, java.awt.BorderLayout.PAGE_START);
@@ -401,11 +392,13 @@ public class ShapeTopComponent extends TopComponent implements Runnable, LookupL
 
     private void project_nameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_project_nameFocusLost
         // TODO add your handling code here:
-        project_name.setText(formatString(project_name.getText()));
-        this.setName(project_name.getText());
-        used = true;
+        if (!project_name.getText().isEmpty()) {
+            project_name.setText(formatString(project_name.getText()));
+            this.setName(project_name.getText());
+            used = true;
 
-        ShapesUtilities.updateBlocks();
+            ShapesUtilities.updateBlocks();
+        }
         //Message msg = new NotifyDescriptor.Message("Name normalized!", NotifyDescriptor.ERROR_MESSAGE);
         //DialogDisplayer.getDefault().notify(msg);
     }//GEN-LAST:event_project_nameFocusLost
@@ -435,7 +428,7 @@ public class ShapeTopComponent extends TopComponent implements Runnable, LookupL
 
                 while (flagg == 0) {
                     flagg = 1;
-                    
+
                     for (int i = 0; i
                             < getScene().getEdges().toArray().length; i++) {
                         GenericEdge xptoedge = (GenericEdge) (getScene().getEdges().toArray()[i]);
@@ -474,9 +467,8 @@ public class ShapeTopComponent extends TopComponent implements Runnable, LookupL
             flag_thread = true;
 
             if (threaded) {
-                //memory_logic = new Hashtable();
                 memory = new HashMap();
-                run_dialog = new RunDialog();
+                run_dialog = new RunDialog(false);
 
                 new Thread(this).start();
             } else {
@@ -655,6 +647,15 @@ public class ShapeTopComponent extends TopComponent implements Runnable, LookupL
         }
 
         if (ficheiro != null) {
+            for (int i = 0; i < 2; i++) {
+                for (GenericNode n : this.getScene().getNodes()) {
+                    if (n instanceof StartNode || n instanceof FinishNode) {
+                        this.getScene().removeNode(n);
+                        break;
+                    }
+                }
+            }
+
             if (ficheiro.toString().contains(".btb")) {
                 this.setName(ficheiro.getName().replace(".btb", ""));
 
@@ -761,7 +762,7 @@ public class ShapeTopComponent extends TopComponent implements Runnable, LookupL
                                     int origem = Integer.parseInt(lines[0]);
                                     int destino = Integer.parseInt(lines[1]);
                                     int tipo = Integer.parseInt(lines[2]);
-                                    
+
                                     GenericNode origem_temp = getNode(origem);
                                     GenericNode destino_temp = getNode(destino);
 
@@ -866,39 +867,74 @@ public class ShapeTopComponent extends TopComponent implements Runnable, LookupL
 
     public void run() {
         //GenericNode selecionado = (GenericNode) (getScene().getSelectedObjects().toArray()[0]);
-        GenericNode selecionado = getScene().getStartingNode();
-        GenericNode old = null;
+        selecionado = getScene().getStartingNode();
+        old = null;
 
 
         while (selecionado != null && flag_thread) {
-            if (MemoryTopComponent.findInstance() != null) {
-                MemoryTopComponent.findInstance().updateMemory(memory);
-            }
-            run_dialog.refreshMem(memory);
-            old = selecionado;
-            selecionado = executeNode(selecionado);
-
-            if (selecionado != null) {
-                Object[] edges = this.getScene().findEdgesBetween(old, selecionado).toArray();
-
-                if (edges.length > 0) {
-                    getScene().setFocusedWidget(getScene().findWidget(edges[0]));
-                    getScene().validate();
-                }
-                try {
-                    Thread.sleep(50);
-                } catch (InterruptedException ex) {
-                    Exceptions.printStackTrace(ex);
-                }
-            }
-            getScene().setFocusedWidget(getScene().findWidget(selecionado));
-            getScene().validate();
+            atomic_run(false);
         }
 
         if (threaded) {
             run_dialog.destroi(true);
         }
         flag_thread = false;
+    }
+
+    public void atomic_run(boolean debug) {
+        if (MemoryTopComponent.findInstance() != null) {
+            MemoryTopComponent.findInstance().updateMemory(memory);
+        }
+        run_dialog.refreshMem(memory);
+        old = selecionado;
+
+        getScene().setFocusedWidget(getScene().findWidget(selecionado));
+        getScene().validate();
+
+        selecionado = executeNode(selecionado);
+
+        if (selecionado != null) {
+            Object[] edges = this.getScene().findEdgesBetween(old, selecionado).toArray();
+
+            if (edges.length > 0 && !debug) {
+                getScene().setFocusedWidget(getScene().findWidget(edges[0]));
+                getScene().validate();
+            }
+            try {
+                Thread.sleep(50);
+            } catch (InterruptedException ex) {
+                Exceptions.printStackTrace(ex);
+            }
+        }
+
+    }
+
+    public void debug() {
+        if (run_dialog != null) {
+            run_dialog.disableButton();
+        }
+        
+        if (selecionado == null) {
+            if (!connected) {
+                this.liga();
+            }
+
+            if (connected) {
+                memory = new HashMap();
+                run_dialog = new RunDialog(true);
+                selecionado = getScene().getStartingNode();
+                old = null;
+            }
+        }
+
+        atomic_run(true);
+        if (selecionado == null && connected) {
+            run_dialog.destroi(true);
+        }
+        
+        if (run_dialog != null) {
+            run_dialog.enableButton();
+        }
     }
 
     public void config() {

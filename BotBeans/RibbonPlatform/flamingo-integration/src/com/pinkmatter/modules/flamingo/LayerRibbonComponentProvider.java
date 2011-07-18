@@ -27,17 +27,19 @@
  * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-
 package com.pinkmatter.modules.flamingo;
 
 import com.pinkmatter.spi.flamingo.RibbonAppMenuProvider;
 import com.pinkmatter.spi.flamingo.RibbonComponentProvider;
+import java.awt.Dimension;
 import java.util.List;
 import javax.swing.JComponent;
 import javax.swing.JSeparator;
 import org.pushingpixels.flamingo.api.common.RichTooltip;
+import org.pushingpixels.flamingo.api.ribbon.AbstractRibbonBand;
 import org.pushingpixels.flamingo.api.ribbon.JRibbon;
 import org.pushingpixels.flamingo.api.ribbon.RibbonApplicationMenu;
+import org.pushingpixels.flamingo.api.ribbon.RibbonTask;
 
 /**
  *
@@ -54,7 +56,6 @@ public class LayerRibbonComponentProvider extends RibbonComponentProvider {
         addHelpButton(ribbon);
         return ribbon;
     }
-
 
     private static void addAppMenu(JRibbon ribbon) {
         RibbonAppMenuProvider appMenuProvider = RibbonAppMenuProvider.getDefault();
@@ -90,8 +91,13 @@ public class LayerRibbonComponentProvider extends RibbonComponentProvider {
     private void addTaskPanes(JRibbon ribbon) {
         RibbonComponentFactory factory = new RibbonComponentFactory();
         for (ActionItem item : ActionItems.forPath("Ribbon/TaskPanes")) {// NOI18N
-             ribbon.addTask(factory.createRibbonTask(item));
+            RibbonTask rt = factory.createRibbonTask(item);
+            List<AbstractRibbonBand<?>> bands = rt.getBands();
+            for (AbstractRibbonBand arb : bands) {
+                arb.setPreferredSize(new Dimension(40, 60));
+            }
+            ribbon.addTask(rt);
+            //ribbon.addTask(factory.createRibbonTask(item));
         }
     }
- 
 }
