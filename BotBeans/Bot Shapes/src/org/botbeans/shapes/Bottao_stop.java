@@ -6,9 +6,19 @@ package org.botbeans.shapes;
 
 import java.awt.Toolkit;
 import org.botbeans.shapes.utilities.ShapesUtilities;
+import org.openide.awt.ActionID;
+import org.openide.awt.ActionReference;
+import org.openide.awt.ActionReferences;
+import org.openide.awt.ActionRegistration;
 import org.openide.util.HelpCtx;
 import org.openide.util.NbBundle;
 import org.openide.util.actions.CallableSystemAction;
+@ActionID(id = "org.botbeans.shapes.Bottao_stop", category = "Edit")
+@ActionRegistration(displayName = "CTL_Bottao_stop")
+@ActionReferences(value = {
+    @ActionReference(path = "Menu/Run", position = -40),
+    @ActionReference(path = "Toolbars/Grafo", position = -40),
+    @ActionReference(path = "Ribbon/TaskPanes/Main/Execution", position = -40)})
 
 public final class Bottao_stop extends CallableSystemAction {
 

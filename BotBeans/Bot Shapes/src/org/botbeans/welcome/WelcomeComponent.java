@@ -4,7 +4,10 @@ import java.awt.BorderLayout;
 import java.lang.ref.WeakReference;
 import javax.swing.JComponent;
 import org.botbeans.welcome.ui.StartPageContent;
+import org.netbeans.api.settings.ConvertAsProperties;
 import org.openide.ErrorManager;
+import org.openide.awt.ActionID;
+import org.openide.awt.ActionReference;
 import org.openide.nodes.Node;
 import org.openide.windows.TopComponent;
 import org.openide.windows.WindowManager;
@@ -13,6 +16,16 @@ import org.openide.windows.WindowManager;
  *
  * @author Viorel
  */
+@ConvertAsProperties(dtd = "-//org.botbeans.shapes//Memory//EN",
+autostore = false)
+@TopComponent.Description(preferredID = "WelcomeComponent",
+iconBase = "org/botbeans/shapes/icons/help.png",
+persistenceType = TopComponent.PERSISTENCE_NEVER)
+@TopComponent.Registration(mode = "editor", openAtStartup = true)
+@ActionID(category = "Window", id = "org.botbeans.shapes.MemoryTopComponent")
+@ActionReference(path = "Menu/Window" /*, position = 333 */)
+@TopComponent.OpenActionRegistration(displayName = "#CTL_Welcome",
+preferredID = "WelcomeComponent")
 public class WelcomeComponent extends TopComponent {
 
     static final long serialVersionUID = 6021472310161712674L;
@@ -20,6 +33,18 @@ public class WelcomeComponent extends TopComponent {
             new WeakReference<WelcomeComponent>(null);
     private JComponent content;
     private boolean initialized = false;
+
+    void writeProperties(java.util.Properties p) {
+        // better to version settings since initial version as advocated at
+        // http://wiki.apidesign.org/wiki/PropertyFiles
+        p.setProperty("version", "1.0");
+        // TODO store your settings
+    }
+
+    void readProperties(java.util.Properties p) {
+        String version = p.getProperty("version");
+        // TODO read your settings according to their version
+    }
 
     private WelcomeComponent() {
         setLayout(new BorderLayout());

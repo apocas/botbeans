@@ -7,7 +7,6 @@ package org.botbeans.shapes;
 import java.util.HashMap;
 import org.openide.util.NbBundle;
 import org.openide.windows.TopComponent;
-import org.openide.windows.WindowManager;
 import org.netbeans.api.settings.ConvertAsProperties;
 import org.openide.awt.ActionID;
 import org.openide.awt.ActionReference;
@@ -18,7 +17,7 @@ import org.openide.awt.ActionReference;
 @ConvertAsProperties(dtd = "-//org.botbeans.shapes//Memory//EN",
 autostore = false)
 @TopComponent.Description(preferredID = "MemoryTopComponent",
-iconBase = "org/botbeans/shapes/icons/memory.png",
+iconBase = "org/botbeans/shapes/icons/Computer_File_056.gif",
 persistenceType = TopComponent.PERSISTENCE_ALWAYS)
 @TopComponent.Registration(mode = "properties", openAtStartup = false)
 @ActionID(category = "Window", id = "org.botbeans.shapes.MemoryTopComponent")
@@ -28,6 +27,7 @@ preferredID = "MemoryTopComponent")
 public final class MemoryTopComponent extends TopComponent {
 
     private final MemoryTela mt;
+    private static MemoryTopComponent instance;
 
     public MemoryTopComponent() {
         initComponents();
@@ -45,10 +45,17 @@ public final class MemoryTopComponent extends TopComponent {
                 return (MemoryTopComponent) tc;
             }
         }
-        
-        return null;
+
+        return getDefault();
     }
-    
+
+    public static synchronized MemoryTopComponent getDefault() {
+        if (instance == null) {
+            instance = new MemoryTopComponent();
+        }
+        return instance;
+    }
+
     public void updateMemory(HashMap m) {
         mt.setMemory(m);
         mt.repaint();

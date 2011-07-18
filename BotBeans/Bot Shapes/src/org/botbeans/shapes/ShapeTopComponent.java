@@ -50,6 +50,7 @@ import org.botbeans.shapes.nodes.VariableNode;
 import org.botbeans.shapes.palette.CategoryChildFactory;
 import org.botbeans.shapes.palette.Shape;
 import org.botbeans.shapes.utilities.ShapesUtilities;
+import org.netbeans.api.settings.ConvertAsProperties;
 import org.netbeans.spi.palette.PaletteActions;
 import org.netbeans.spi.palette.PaletteController;
 import org.netbeans.spi.palette.PaletteFactory;
@@ -57,6 +58,8 @@ import org.openide.DialogDisplayer;
 import org.openide.NotifyDescriptor;
 import org.openide.NotifyDescriptor.Confirmation;
 import org.openide.NotifyDescriptor.Message;
+import org.openide.awt.ActionID;
+import org.openide.awt.ActionReference;
 import org.openide.cookies.SaveCookie;
 import org.openide.nodes.AbstractNode;
 import org.openide.nodes.Children;
@@ -76,10 +79,31 @@ import org.openide.windows.WindowManager;
  * Topcomponent
  * @author Apocas
  */
+@ConvertAsProperties(dtd = "-//org.botbeans.shapes//Memory//EN",
+autostore = false)
+@TopComponent.Description(preferredID = "ShapeTopComponent",
+iconBase = "org/botbeans/shapes/icons/Computer_File_053.gif",
+persistenceType = TopComponent.PERSISTENCE_NEVER)
+@TopComponent.Registration(mode = "editor", openAtStartup = true)
+@ActionID(category = "Window", id = "org.botbeans.shapes.ShapeTopComponent")
+@TopComponent.OpenActionRegistration(displayName = "#CTL_ShapeTopComponent",
+preferredID = "ShapeTopComponent")
 public class ShapeTopComponent extends TopComponent implements Runnable, LookupListener, Serializable {
 
     private final PaletteController pc;
     private boolean used = false;
+
+    void writeProperties(java.util.Properties p) {
+        // better to version settings since initial version as advocated at
+        // http://wiki.apidesign.org/wiki/PropertyFiles
+        p.setProperty("version", "1.0");
+        // TODO store your settings
+    }
+
+    void readProperties(java.util.Properties p) {
+        String version = p.getProperty("version");
+        // TODO read your settings according to their version
+    }
 
     /**
      * @return the pc
@@ -119,7 +143,6 @@ public class ShapeTopComponent extends TopComponent implements Runnable, LookupL
             return false;
         }
     }
-    
     int flag;
     private Socket clientSocket;
     private JComponent myView;
@@ -435,7 +458,7 @@ public class ShapeTopComponent extends TopComponent implements Runnable, LookupL
 
                 while (flagg == 0) {
                     flagg = 1;
-                    
+
                     for (int i = 0; i
                             < getScene().getEdges().toArray().length; i++) {
                         GenericEdge xptoedge = (GenericEdge) (getScene().getEdges().toArray()[i]);
@@ -761,7 +784,7 @@ public class ShapeTopComponent extends TopComponent implements Runnable, LookupL
                                     int origem = Integer.parseInt(lines[0]);
                                     int destino = Integer.parseInt(lines[1]);
                                     int tipo = Integer.parseInt(lines[2]);
-                                    
+
                                     GenericNode origem_temp = getNode(origem);
                                     GenericNode destino_temp = getNode(destino);
 
