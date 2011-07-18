@@ -94,15 +94,11 @@ public class ShapeTopComponent extends TopComponent implements Runnable, LookupL
     private boolean used = false;
 
     void writeProperties(java.util.Properties p) {
-        // better to version settings since initial version as advocated at
-        // http://wiki.apidesign.org/wiki/PropertyFiles
         p.setProperty("version", "1.0");
-        // TODO store your settings
     }
 
     void readProperties(java.util.Properties p) {
         String version = p.getProperty("version");
-        // TODO read your settings according to their version
     }
 
     /**
@@ -156,7 +152,6 @@ public class ShapeTopComponent extends TopComponent implements Runnable, LookupL
     private JFileChooser chooser;
     private DataOutputStream out;
     private DataInputStream in;
-    //private Hashtable memory_logic;
     private HashMap memory;
     private final InstanceContent content;
     private SaveCookieImpl savenode;
@@ -183,7 +178,6 @@ public class ShapeTopComponent extends TopComponent implements Runnable, LookupL
 
         savenode = new SaveCookieImpl();
 
-        //PaletteController pc = PaletteSupport.createPalette();
         pc = PaletteFactory.createPalette(new AbstractNode(Children.create(new CategoryChildFactory(), true)), new PaletteActions() {
 
             @Override
@@ -212,32 +206,9 @@ public class ShapeTopComponent extends TopComponent implements Runnable, LookupL
             }
         });
 
-        //associateLookup(Lookups.fixed(new Object[]{pc}));
-        //associateLookup(new ProxyLookup(Lookups.fixed(new Object[]{content})));
         associateLookup(new AbstractLookup(content));
         content.add(savenode);
         content.add(pc);
-
-        /*
-        AbstractNode c = pc.getRoot().lookup(AbstractNode.class);
-        Children ch = c.getChildren();
-        
-        final Shape item = new Shape();
-        item.setCategory(ShapesUtilities.categories[5]);
-        item.setImage(ShapesUtilities.items[17][2]);
-        item.setTitle("Function");
-        AbstractNode node = new AbstractNode(Children.LEAF) {
-        
-        @Override
-        public Transferable drag() throws IOException {
-        return item;
-        }
-        };
-        node.setName("Function");
-        node.setIconBaseWithExtension(ShapesUtilities.items[17][2]);
-        ((AbstractNode) ch.getNodes()[5]).getChildren().add(new Node[]{node});
-         */
-
 
         connected = false;
 
@@ -273,13 +244,6 @@ public class ShapeTopComponent extends TopComponent implements Runnable, LookupL
         ((AbstractNode) ch.getNodes()[5]).getChildren().remove(((AbstractNode) ch.getNodes()[5]).getChildren().getNodes());
     }
 
-    /*
-    public void mergeMemory(Hashtable m) {
-    Hashtable aux = new Hashtable();
-    aux.putAll(m);
-    aux.putAll(memory);
-    memory = aux;
-    }*/
     public static ArrayList<String> getProjectNames() {
         ArrayList<String> names = new ArrayList<String>();
 
@@ -365,11 +329,7 @@ public class ShapeTopComponent extends TopComponent implements Runnable, LookupL
     private class SaveCookieImpl implements SaveCookie {
 
         public void save() throws IOException {
-            //Confirmation msg = new NotifyDescriptor.Confirmation("Do you want to save?", NotifyDescriptor.OK_CANCEL_OPTION, NotifyDescriptor.QUESTION_MESSAGE);
-            //Object result = DialogDisplayer.getDefault().notify(msg);
-            //if (NotifyDescriptor.YES_OPTION.equals(result)) {
             guarda();
-            //}
         }
     }
 
@@ -497,7 +457,6 @@ public class ShapeTopComponent extends TopComponent implements Runnable, LookupL
             flag_thread = true;
 
             if (threaded) {
-                //memory_logic = new Hashtable();
                 memory = new HashMap();
                 run_dialog = new RunDialog();
 
