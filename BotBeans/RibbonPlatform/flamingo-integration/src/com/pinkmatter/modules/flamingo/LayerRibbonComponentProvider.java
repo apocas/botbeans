@@ -94,7 +94,7 @@ public class LayerRibbonComponentProvider extends RibbonComponentProvider {
             RibbonTask rt = factory.createRibbonTask(item);
             List<AbstractRibbonBand<?>> bands = rt.getBands();
             for (AbstractRibbonBand arb : bands) {
-                arb.setPreferredSize(new Dimension(40, 60));
+                arb.setPreferredSize(new Dimension(40, 65));
             }
             ribbon.addTask(rt);
             //ribbon.addTask(factory.createRibbonTask(item));
