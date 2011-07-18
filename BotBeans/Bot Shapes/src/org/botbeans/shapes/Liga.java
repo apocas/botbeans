@@ -18,6 +18,7 @@ import org.openide.windows.WindowManager;
 @ActionRegistration(displayName = "CTL_Liga")
 @ActionReferences(value = {
     @ActionReference(path = "Ribbon/AppMenu", position = -100),
+    @ActionReference(path = "Ribbon/TaskBar", position = 100),
     @ActionReference(path = "Toolbars/Network", position = -100)})
 public final class Liga extends CallableSystemAction {
 

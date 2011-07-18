@@ -32,10 +32,10 @@ public final class Novo extends CallableSystemAction {
         tc.requestActive();
         contador++;
 
-        tc.getScene().bringMaintoFront();
-        tc.getScene().addStartStop();
+        //tc.getScene().bringMaintoFront();
+        //tc.getScene().addStartStop();
 
-        ShapesUtilities.updateBlocks();
+//        ShapesUtilities.updateBlocks();
     }
 
     public String getName() {

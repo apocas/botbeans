@@ -17,7 +17,7 @@ import org.openide.util.actions.CallableSystemAction;
 @ActionRegistration(displayName = "CTL_Abrir")
 @ActionReferences(value = {
     @ActionReference(path = "Menu/File", position = 100),
-    @ActionReference(path = "Ribbon/AppMenu", position = 100),
+    @ActionReference(path = "Ribbon/AppMenu", position = -100),
     @ActionReference(path = "Ribbon/TaskBar", position = 100),
     @ActionReference(path = "Toolbars/Ficheiro", position = -250)})
 public final class Abrir extends CallableSystemAction {

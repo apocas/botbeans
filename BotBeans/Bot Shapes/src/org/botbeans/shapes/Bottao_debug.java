@@ -25,7 +25,7 @@ public final class Bottao_debug extends CallableSystemAction {
     public void performAction() {
         ShapeTopComponent stc = ShapeTopComponent.getLastActivatedComponent();
         if (stc != null) {
-            stc.executa(true);
+            stc.debug();
         } else {
             Toolkit.getDefaultToolkit().beep();
         }
