@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module codename="org.botbeans.common">
+    <module_version install_time="1335729202562" last="true" origin="installer" specification_version="1.0">
+        <file crc="346355722" name="config/Modules/org-botbeans-common.xml"/>
+        <file crc="2078381946" name="modules/org-botbeans-common.jar"/>
+    </module_version>
+</module>

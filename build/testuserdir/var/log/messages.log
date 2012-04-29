@@ -1,0 +1,189 @@
+-------------------------------------------------------------------------------
+>Log Session: Sunday, April 29, 2012 8:53:26 PM WEST
+>System Info: 
+  Product Version         = Botbeans 201204101705
+  Operating System        = Mac OS X version 10.7.3 running on x86_64
+  Java; VM; Vendor        = 1.6.0_31; Java HotSpot(TM) 64-Bit Server VM 20.6-b01-415; Apple Inc.
+  Runtime                 = Java(TM) SE Runtime Environment 1.6.0_31-b04-415-11M3635
+  Java Home               = /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
+  System Locale; Encoding = en_US (botbeans); MacRoman
+  Home Directory          = /Users/pedrodias
+  Current Directory       = /Users/pedrodias/Documents/Github/botbeans/BotBeans
+  User Directory          = /Users/pedrodias/Documents/Github/botbeans/BotBeans/build/testuserdir
+  Cache Directory         = /Users/pedrodias/Documents/Github/botbeans/BotBeans/build/testuserdir/var/cache
+  Installation            = /Users/pedrodias/Documents/Github/botbeans/BotBeans/build/cluster
+                            /Applications/NetBeans/NetBeans 7.1.2.app/Contents/Resources/NetBeans/ide
+                            /Applications/NetBeans/NetBeans 7.1.2.app/Contents/Resources/NetBeans/platform
+                            /Applications/NetBeans/NetBeans 7.1.2.app/Contents/Resources/NetBeans/platform
+  Boot & Ext. Classpath   = /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsfd.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar:/System/Library/Frameworks/JavaVM.framework/Frameworks/JavaRuntimeSupport.framework/Resources/Java/JavaRuntimeSupport.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/ui.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/laf.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/sunrsasign.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsse.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jce.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/charsets.jar:/Library/Java/Extensions/bluecove-2.1.1-SNAPSHOT.jar:/Library/Java/Extensions/bluecove-bluez-2.1.1-SNAPSHOT.jar:/System/Library/Java/Extensions/AppleScriptEngine.jar:/System/Library/Java/Extensions/dns_sd.jar:/System/Library/Java/Extensions/j3daudio.jar:/System/Library/Java/Extensions/j3dcore.jar:/System/Library/Java/Extensions/j3dutils.jar:/System/Library/Java/Extensions/jai_codec.jar:/System/Library/Java/Extensions/jai_core.jar:/System/Library/Java/Extensions/mlibwrapper_jai.jar:/System/Library/Java/Extensions/MRJToolkit.jar:/System/Library/Java/Extensions/QTJava.zip:/System/Library/Java/Extensions/vecmath.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/apple_provider.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/dnsns.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/localedata.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/sunjce_provider.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/sunpkcs11.jar
+  Application Classpath   = /Applications/NetBeans/NetBeans 7.1.2.app/Contents/Resources/NetBeans/platform/lib/boot.jar:/Applications/NetBeans/NetBeans 7.1.2.app/Contents/Resources/NetBeans/platform/lib/org-openide-modules.jar:/Applications/NetBeans/NetBeans 7.1.2.app/Contents/Resources/NetBeans/platform/lib/org-openide-util-lookup.jar:/Applications/NetBeans/NetBeans 7.1.2.app/Contents/Resources/NetBeans/platform/lib/org-openide-util.jar:/Applications/NetBeans/NetBeans 7.1.2.app/Contents/Resources/NetBeans/platform/lib/locale/boot_ja.jar:/Applications/NetBeans/NetBeans 7.1.2.app/Contents/Resources/NetBeans/platform/lib/locale/boot_pt_BR.jar:/Applications/NetBeans/NetBeans 7.1.2.app/Contents/Resources/NetBeans/platform/lib/locale/boot_ru.jar:/Applications/NetBeans/NetBeans 7.1.2.app/Contents/Resources/NetBeans/platform/lib/locale/boot_zh_CN.jar:/Applications/NetBeans/NetBeans 7.1.2.app/Contents/Resources/NetBeans/platform/lib/locale/org-openide-modules_ja.jar:/Applications/NetBeans/NetBeans 7.1.2.app/Contents/Resources/NetBeans/platform/lib/locale/org-openide-modules_pt_BR.jar:/Applications/NetBeans/NetBeans 7.1.2.app/Contents/Resources/NetBeans/platform/lib/locale/org-openide-modules_ru.jar:/Applications/NetBeans/NetBeans 7.1.2.app/Contents/Resources/NetBeans/platform/lib/locale/org-openide-modules_zh_CN.jar:/Applications/NetBeans/NetBeans 7.1.2.app/Contents/Resources/NetBeans/platform/lib/locale/org-openide-util-lookup_ja.jar:/Applications/NetBeans/NetBeans 7.1.2.app/Contents/Resources/NetBeans/platform/lib/locale/org-openide-util-lookup_pt_BR.jar:/Applications/NetBeans/NetBeans 7.1.2.app/Contents/Resources/NetBeans/platform/lib/locale/org-openide-util-lookup_ru.jar:/Applications/NetBeans/NetBeans 7.1.2.app/Contents/Resources/NetBeans/platform/lib/locale/org-openide-util-lookup_zh_CN.jar:/Applications/NetBeans/NetBeans 7.1.2.app/Contents/Resources/NetBeans/platform/lib/locale/org-openide-util_ja.jar:/Applications/NetBeans/NetBeans 7.1.2.app/Contents/Resources/NetBeans/platform/lib/locale/org-openide-util_pt_BR.jar:/Applications/NetBeans/NetBeans 7.1.2.app/Contents/Resources/NetBeans/platform/lib/locale/org-openide-util_ru.jar:/Applications/NetBeans/NetBeans 7.1.2.app/Contents/Resources/NetBeans/platform/lib/locale/org-openide-util_zh_CN.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/dt.jar
+  Startup Classpath       = /Applications/NetBeans/NetBeans 7.1.2.app/Contents/Resources/NetBeans/platform/core/core.jar:/Applications/NetBeans/NetBeans 7.1.2.app/Contents/Resources/NetBeans/platform/core/org-openide-filesystems.jar:/Applications/NetBeans/NetBeans 7.1.2.app/Contents/Resources/NetBeans/platform/core/locale/core_ja.jar:/Applications/NetBeans/NetBeans 7.1.2.app/Contents/Resources/NetBeans/platform/core/locale/core_pt_BR.jar:/Applications/NetBeans/NetBeans 7.1.2.app/Contents/Resources/NetBeans/platform/core/locale/core_ru.jar:/Applications/NetBeans/NetBeans 7.1.2.app/Contents/Resources/NetBeans/platform/core/locale/core_zh_CN.jar:/Applications/NetBeans/NetBeans 7.1.2.app/Contents/Resources/NetBeans/platform/core/locale/org-openide-filesystems_ja.jar:/Applications/NetBeans/NetBeans 7.1.2.app/Contents/Resources/NetBeans/platform/core/locale/org-openide-filesystems_pt_BR.jar:/Applications/NetBeans/NetBeans 7.1.2.app/Contents/Resources/NetBeans/platform/core/locale/org-openide-filesystems_ru.jar:/Applications/NetBeans/NetBeans 7.1.2.app/Contents/Resources/NetBeans/platform/core/locale/org-openide-filesystems_zh_CN.jar:/Users/pedrodias/Documents/Github/botbeans/BotBeans/build/cluster/core/locale/core_botbeans.jar
+-------------------------------------------------------------------------------
+Warning - could not install some modules:
+	org.netbeans.modules.git - No module providing the capability org.netbeans.api.javahelp.Help could be found.
+	org.netbeans.modules.git - The module named org.netbeans.modules.diff/1 was needed and not found.
+	org.netbeans.modules.git - The module named org.netbeans.modules.editor.errorstripe/2 was needed and not found.
+	org.netbeans.modules.git - The module named org.netbeans.modules.editor.fold/1 was needed and not found.
+	org.netbeans.modules.git - The module named org.netbeans.modules.editor.lib/3 was needed and not found.
+	org.netbeans.modules.git - The module named org.netbeans.modules.editor.settings/1 was needed and not found.
+	org.netbeans.modules.git - The module named org.netbeans.modules.projectapi/1 was needed and not found.
+	org.netbeans.modules.git - The module named org.netbeans.modules.projectuiapi/1 was needed and not found.
+	org.netbeans.modules.git - The module named org.netbeans.modules.spellchecker.apimodule was needed and not found.
+	org.netbeans.modules.git - The module named org.netbeans.modules.versioning/1 was needed and not found.
+	org.netbeans.modules.git - The module named org.netbeans.modules.versioning.util was needed and not found.
+WARNING [org.netbeans.core.modules]: the modules [org.botbeans.shapes] use org.jdesktop.layout which is deprecated: Use javax.swing.GroupLayout instead. (In form editor: select Form ... in Inspector; change Layout Generation Style to Standard Java 6 code.)
+WARNING [org.netbeans.core.projects.cache]: Inefficient to include an empty layer in a module: jar:file:/Users/pedrodias/Documents/Github/botbeans/BotBeans/build/cluster/modules/org-botbeans-common.jar!/org/botbeans/common/layer.xml
+INFO [org.netbeans.core.startup.NbEvents]: Turning on modules:
+	org.openide.util.lookup [8.11.1 201204101705]
+	org.openide.util [8.19.2 201204101705]
+	org.openide.modules [7.27.1 201204101705]
+	org.pushingpixels.flamingo [5.0 120429]
+	org.openide.filesystems [7.53.2 201204101705]
+	org.openide.awt [7.39.1 201204101705]
+	org.netbeans.api.progress/1 [1.26.1 201204101705]
+	org.openide.dialogs [7.23.1 201204101705]
+	org.openide.nodes [7.25.1 201204101705]
+	org.openide.windows [6.48.2 201204101705]
+	org.netbeans.modules.editor.mimelookup/1 [1.24.1 201204101705]
+	org.openide.text [6.43.3 201204101705]
+	org.netbeans.swing.tabcontrol [1.29.1 201204101705]
+	org.netbeans.swing.outline [1.17.2 201204101705]
+	org.openide.explorer [6.40.1 201204101705]
+	org.openide.actions [6.24.1 201204101705]
+	org.netbeans.modules.queries/1 [1.25.1 201204101705]
+	org.netbeans.api.annotations.common/1 [1.11.1 201204101705]
+	org.openide.loaders [7.32.1 201204101705]
+	org.openide.io [1.29.1 201204101705]
+	org.netbeans.swing.plaf [1.23.1 201204101705]
+	org.netbeans.spi.quicksearch [1.12.1 201204101705]
+	org.netbeans.spi.palette/1 [1.29.1 201204101705]
+	org.netbeans.bootstrap/1 [2.44.3 201204101705]
+	org.netbeans.core.startup/1 [1.36.1 201204101705]
+	org.netbeans.modules.settings/1 [1.33.1 201204101705]
+	org.netbeans.modules.keyring [1.8.1.1 201204101705]
+	org.netbeans.core/2 [3.28.1 201204101705]
+	org.netbeans.modules.options.api/1 [1.24.1 201204101705]
+	org.netbeans.modules.options.keymap [1.16.1 201204101705]
+	org.netbeans.libs.jna/1 [1.16.1 201204101705]
+	org.netbeans.modules.masterfs/2 [2.34.2 201204101705]
+	org.netbeans.modules.keyring.impl [1.5.2 201204101705]
+	org.netbeans.modules.favorites/1 [1.27.1 201204101705]
+	org.netbeans.modules.editor.mimelookup.impl/1 [1.16.1 201204101705]
+	org.netbeans.core.windows/2 [2.41.3 201204101705]
+	org.netbeans.core.ui/1 [1.29.1 201204101705]
+	org.netbeans.api.visual [2.30.1 201204101705]
+	org.jfreechart [1.0 120429]
+	org.jdesktop.layout/1 [1.19.1 201204101705]
+	org.jcommon [1.0 120429]
+	org.botbeans.common [1.0 120429]
+	bluecove [1.0 120429]
+	info.clearthought [1.0 120429]
+	org.botbeans.blocks [1.0 120429]
+	org.botbeans.control [1.0 120429]
+	org.botbeans.shapes [1.0 120429]
+	com.pinkmatter.modules.flamingo [0.1 120429]
+WARNING [org.openide.filesystems.Ordering]: Found same position -100 for both Ribbon/AppMenu/org-botbeans-shapes-Abrir.shadow and Ribbon/AppMenu/org-botbeans-shapes-Liga.shadow
+WARNING [org.openide.filesystems.Ordering]: Found same position -100 for both Ribbon/AppMenu/org-botbeans-shapes-Abrir.shadow and Ribbon/AppMenu/org-botbeans-shapes-Novo.shadow
+WARNING [org.openide.filesystems.Ordering]: Found same position -100 for both Ribbon/AppMenu/org-botbeans-shapes-Liga.shadow and Ribbon/AppMenu/org-botbeans-shapes-Novo.shadow
+WARNING [org.openide.filesystems.Ordering]: Not all children in Ribbon/AppMenu/Window/Windows/ marked with the position attribute: [org-netbeans-core-windows-actions-GlobalPropertiesAction.instance, org-netbeans-modules-palette-ShowPaletteAction.instance], but some are: [org-botbeans-shapes-OpenMemoryAction.shadow]
+WARNING [org.openide.filesystems.Ordering]: Found same position 100 for both Ribbon/TaskBar/org-botbeans-shapes-Abrir.shadow and Ribbon/TaskBar/org-botbeans-shapes-Liga.shadow
+WARNING [org.openide.filesystems.Ordering]: Found same position -45 for both Ribbon/TaskPanes/Main/Execution/org-botbeans-shapes-Bottao_debug.shadow and Ribbon/TaskPanes/Main/Execution/org-botbeans-shapes-Bottao_run.shadow
+WARNING [org.openide.filesystems.Ordering]: Not all children in Ribbon/TaskPanes/Window/Windows/ marked with the position attribute: [org-netbeans-core-windows-actions-GlobalPropertiesAction.instance, org-netbeans-modules-palette-ShowPaletteAction.instance], but some are: [org-botbeans-shapes-OpenMemoryAction.shadow]
+WARNING [org.openide.filesystems.Ordering]: Not all children in Menu/ marked with the position attribute: [Run], but some are: [File, Window, Help]
+WARNING [org.openide.filesystems.Ordering]: Not all children in Toolbars/ marked with the position attribute: [Editar, Ficheiro, Grafo, Network], but some are: [Memory, Standard.xml]
+WARNING [org.openide.filesystems.Ordering]: Found same position -45 for both Toolbars/Grafo/org-botbeans-shapes-Bottao_debug.shadow and Toolbars/Grafo/org-botbeans-shapes-Bottao_run.shadow
+INFO [org.netbeans.core.windows.persistence]
+
+msg
+Caused: java.io.FileNotFoundException: jar:file:/Users/pedrodias/Documents/Github/botbeans/BotBeans/build/cluster/modules/org-botbeans-shapes.jar!/org/botbeans/shapes/Welcome.settings
+	at org.netbeans.JarClassLoader$NbJarURLConnection.connect(JarClassLoader.java:996)
+	at org.netbeans.JarClassLoader$NbJarURLConnection.getInputStream(JarClassLoader.java:1032)
+	at org.netbeans.core.startup.layers.BinaryFS$BFSFile.getInputStream(BinaryFS.java:860)
+Caused: java.io.FileNotFoundException
+	at org.netbeans.core.startup.layers.BinaryFS$BFSFile.getInputStream(BinaryFS.java:864)
+	at org.openide.filesystems.FileUtil.copyFileImpl(FileUtil.java:731)
+	at org.openide.filesystems.FileObject.copy(FileObject.java:129)
+	at org.openide.filesystems.MultiFileObject.copy(MultiFileObject.java:1372)
+	at org.openide.filesystems.MultiFileObject.copy(MultiFileObject.java:1372)
+[catch] at org.netbeans.core.windows.persistence.PersistenceManager.copySettingsFile(PersistenceManager.java:1295)
+	at org.netbeans.core.windows.persistence.PersistenceManager.copySettingsFiles(PersistenceManager.java:1279)
+	at org.netbeans.core.windows.persistence.PersistenceManager.loadWindowSystem(PersistenceManager.java:1153)
+	at org.netbeans.core.windows.PersistenceHandler.load(PersistenceHandler.java:128)
+	at org.netbeans.core.windows.WindowSystemImpl.load(WindowSystemImpl.java:81)
+	at org.netbeans.core.GuiRunLevel$InitWinSys.run(GuiRunLevel.java:234)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:209)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:682)
+	at java.awt.EventQueue.access$000(EventQueue.java:85)
+	at java.awt.EventQueue$1.run(EventQueue.java:643)
+	at java.awt.EventQueue$1.run(EventQueue.java:641)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:652)
+	at org.netbeans.core.TimableEventQueue.dispatchEvent(TimableEventQueue.java:162)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:296)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:211)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:196)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:188)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+ALL [null]: Cannot copy component settings file to folder MultiFileObject@5e28df48[Windows2Local/Components].
+WARNING [org.openide.filesystems.Ordering]: Not all children in Windows2/Modes/explorer/ marked with the position attribute: [ServerTopComponent.wstcref], but some are: [favorites.wstcref]
+INFO [org.netbeans.core.windows.persistence.ModeParser]
+java.io.FileNotFoundException: jar:file:/Users/pedrodias/Documents/Github/botbeans/BotBeans/build/cluster/modules/org-botbeans-shapes.jar!/org/botbeans/shapes/Welcome.wstcref
+	at org.netbeans.JarClassLoader$NbJarURLConnection.connect(JarClassLoader.java:996)
+	at org.netbeans.JarClassLoader$NbJarURLConnection.getInputStream(JarClassLoader.java:1032)
+	at org.netbeans.core.startup.layers.BinaryFS$BFSFile.getInputStream(BinaryFS.java:860)
+Caused: java.io.FileNotFoundException
+	at org.netbeans.core.startup.layers.BinaryFS$BFSFile.getInputStream(BinaryFS.java:864)
+	at org.openide.filesystems.MultiFileObject.getInputStream(MultiFileObject.java:659)
+	at org.openide.filesystems.MultiFileObject.getInputStream(MultiFileObject.java:659)
+	at org.netbeans.core.windows.persistence.TCRefParser$PropertyHandler.readData(TCRefParser.java:246)
+	at org.netbeans.core.windows.persistence.TCRefParser.load(TCRefParser.java:106)
+[catch] at org.netbeans.core.windows.persistence.ModeParser.readTCRefs(ModeParser.java:319)
+	at org.netbeans.core.windows.persistence.ModeParser.load(ModeParser.java:146)
+	at org.netbeans.core.windows.persistence.WindowManagerParser.readModes(WindowManagerParser.java:444)
+	at org.netbeans.core.windows.persistence.WindowManagerParser.load(WindowManagerParser.java:111)
+	at org.netbeans.core.windows.persistence.PersistenceManager.loadWindowSystem(PersistenceManager.java:1156)
+	at org.netbeans.core.windows.PersistenceHandler.load(PersistenceHandler.java:128)
+	at org.netbeans.core.windows.WindowSystemImpl.load(WindowSystemImpl.java:81)
+	at org.netbeans.core.GuiRunLevel$InitWinSys.run(GuiRunLevel.java:234)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:209)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:682)
+	at java.awt.EventQueue.access$000(EventQueue.java:85)
+	at java.awt.EventQueue$1.run(EventQueue.java:643)
+	at java.awt.EventQueue$1.run(EventQueue.java:641)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:87)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:652)
+	at org.netbeans.core.TimableEventQueue.dispatchEvent(TimableEventQueue.java:162)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:296)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:211)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:196)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:188)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+Diagnostic information
+Input arguments:
+	-Djdk.home=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
+	-Dnetbeans.system_http_proxy=DIRECT
+	-Dnetbeans.system_http_non_proxy_hosts=
+	-Dnetbeans.dirs=/Users/pedrodias/Documents/Github/botbeans/BotBeans/build/cluster:/Applications/NetBeans/NetBeans
+	7.1.2.app/Contents/Resources/NetBeans/ide:/Applications/NetBeans/NetBeans
+	7.1.2.app/Contents/Resources/NetBeans/platform
+	-Dnetbeans.home=/Applications/NetBeans/NetBeans
+	7.1.2.app/Contents/Resources/NetBeans/platform
+	-Dnetbeans.logger.console=true
+	-ea
+	-XX:+HeapDumpOnOutOfMemoryError
+	-XX:HeapDumpPath=/Users/pedrodias/Documents/Github/botbeans/BotBeans/build/testuserdir/var/log/heapdump.hprof
+Compiler: HotSpot 64-Bit Tiered Compilers
+Heap memory usage: initial 0b maximum 123.9MB
+Non heap memory usage: initial 23.2MB maximum 130.0MB
+Garbage collector: ParNew (Collections=9 Total time spent=0s)
+Garbage collector: ConcurrentMarkSweep (Collections=1 Total time spent=0s)
+Classes: loaded=5183 total loaded=5183 unloaded 0
+INFO [org.netbeans.core.ui.warmup.DiagnosticTask]: Total memory 8,589,934,592
+INFO [null]: Total physical memory 8,589,934,592
+WARNING [org.openide.filesystems.Ordering]: Found same position -45 for both Menu/Run/org-botbeans-shapes-Bottao_debug.shadow and Menu/Run/org-botbeans-shapes-Bottao_run.shadow
+WARNING [org.openide.filesystems.Ordering]: Not all children in Menu/Window/ marked with the position attribute: [ServerAction.shadow, org-botbeans-shapes-MemoryTopComponent.shadow], but some are: [org-netbeans-modules-favorites-View.shadow, ShowPaletteAction.shadow, org-netbeans-core-windows-actions-GlobalPropertiesAction.shadow, Separator3.instance, ConfigureWindow, org-netbeans-core-windows-actions-ResetWindowsAction.shadow, Separator4.instance, CloseWindowAction.shadow, CloseAllDocumentsAction.shadow, CloseAllButThisAction.shadow]
+WARNING [org.netbeans.core.startup.InstalledFileLocatorImpl]: module org.netbeans.libs.jna in /Applications/NetBeans/NetBeans 7.1.2.app/Contents/Resources/NetBeans/platform does not own modules/lib/libjnidispatch.jnilib at org.netbeans.StandardModule$OneModuleClassLoader.findLibrary(StandardModule.java:718)

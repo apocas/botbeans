@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE filesystem PUBLIC "-//NetBeans//DTD Filesystem 1.2//EN"
+                            "http://www.netbeans.org/dtds/filesystem-1_2.dtd">
+<filesystem>
+    <folder name="Actions">
+        <folder name="Edit">
+            <file name="org-botbeans-shapes-Abrir.instance">
+                <!--org.botbeans.shapes.Abrir-->
+                <attr name="displayName" stringvalue="CTL_Abrir"/>
+                <attr name="instanceCreate" newvalue="org.botbeans.shapes.Abrir"/>
+            </file>
+            <file name="org-botbeans-shapes-Bottao_debug.instance">
+                <!--org.botbeans.shapes.Bottao_debug-->
+                <attr name="displayName" stringvalue="CTL_Bottao_debug"/>
+                <attr name="instanceCreate" newvalue="org.botbeans.shapes.Bottao_debug"/>
+            </file>
+            <file name="org-botbeans-shapes-Bottao_run.instance">
+                <!--org.botbeans.shapes.Bottao_run-->
+                <attr name="displayName" stringvalue="CTL_Bottao_run"/>
+                <attr name="instanceCreate" newvalue="org.botbeans.shapes.Bottao_run"/>
+            </file>
+            <file name="org-botbeans-shapes-Bottao_stop.instance">
+                <!--org.botbeans.shapes.Bottao_stop-->
+                <attr name="displayName" stringvalue="CTL_Bottao_stop"/>
+                <attr name="instanceCreate" newvalue="org.botbeans.shapes.Bottao_stop"/>
+            </file>
+            <file name="org-botbeans-shapes-ConfigurationAction.instance">
+                <!--org.botbeans.shapes.ConfigurationAction-->
+                <attr
+                    bundlevalue="org.botbeans.shapes.Bundle#CTL_ConfigurationAction" name="displayName"/>
+                <attr
+                    methodvalue="org.openide.awt.Actions.alwaysEnabled" name="instanceCreate"/>
+                <attr name="delegate" newvalue="org.botbeans.shapes.ConfigurationAction"/>
+                <attr name="iconBase" stringvalue="org/botbeans/shapes/icons/Computer_File_097.gif"/>
+                <attr boolvalue="false" name="noIconInMenu"/>
+            </file>
+            <file name="org-botbeans-shapes-DeleteAction.instance">
+                <!--org.botbeans.shapes.DeleteAction-->
+                <attr
+                    bundlevalue="org.botbeans.shapes.Bundle#CTL_DeleteAction" name="displayName"/>
+                <attr
+                    methodvalue="org.openide.awt.Actions.alwaysEnabled" name="instanceCreate"/>
+                <attr name="delegate" newvalue="org.botbeans.shapes.DeleteAction"/>
+                <attr name="iconBase" stringvalue="org/botbeans/shapes/icons/Computer_File_028.gif"/>
+                <attr boolvalue="false" name="noIconInMenu"/>
+            </file>
+            <file name="org-botbeans-shapes-Liga.instance">
+                <!--org.botbeans.shapes.Liga-->
+                <attr name="displayName" stringvalue="CTL_Liga"/>
+                <attr name="instanceCreate" newvalue="org.botbeans.shapes.Liga"/>
+            </file>
+            <file name="org-botbeans-shapes-Novo.instance">
+                <!--org.botbeans.shapes.Novo-->
+                <attr name="displayName" stringvalue="CTL_Novo"/>
+                <attr name="instanceCreate" newvalue="org.botbeans.shapes.Novo"/>
+            </file>
+        </folder>
+        <folder name="File">
+            <file name="org-botbeans-shapes-OpenMemoryAction.instance">
+                <!--org.botbeans.shapes.OpenMemoryAction-->
+                <attr
+                    bundlevalue="org.botbeans.shapes.Bundle#CTL_OpenMemoryAction" name="displayName"/>
+                <attr
+                    methodvalue="org.openide.awt.Actions.alwaysEnabled" name="instanceCreate"/>
+                <attr name="delegate" newvalue="org.botbeans.shapes.OpenMemoryAction"/>
+                <attr name="iconBase" stringvalue="org/botbeans/shapes/icons/Computer_File_056.gif"/>
+                <attr boolvalue="false" name="noIconInMenu"/>
+            </file>
+        </folder>
+        <folder name="Window">
+            <file name="org-botbeans-shapes-MemoryTopComponent.instance">
+                <!--org.botbeans.shapes.MemoryTopComponent-->
+                <!--org.botbeans.welcome.WelcomeComponent-->
+                <attr
+                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
+                <attr name="component" newvalue="org.botbeans.welcome.WelcomeComponent"/>
+                <attr name="preferredID" stringvalue="WelcomeComponent"/>
+                <attr
+                    bundlevalue="org.botbeans.welcome.Bundle#CTL_Welcome" name="displayName"/>
+                <attr name="iconBase" stringvalue="org/botbeans/shapes/icons/help.png"/>
+            </file>
+            <file name="org-botbeans-shapes-ShapeTopComponent.instance">
+                <!--org.botbeans.shapes.ShapeTopComponent-->
+                <attr
+                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
+                <attr name="component" newvalue="org.botbeans.shapes.ShapeTopComponent"/>
+                <attr name="preferredID" stringvalue="ShapeTopComponent"/>
+                <attr
+                    bundlevalue="org.botbeans.shapes.Bundle#CTL_ShapeTopComponent" name="displayName"/>
+                <attr name="iconBase" stringvalue="org/botbeans/shapes/icons/Computer_File_053.gif"/>
+            </file>
+        </folder>
+    </folder>
+    <folder name="Menu">
+        <folder name="File">
+            <file name="org-botbeans-shapes-Abrir.shadow">
+                <!--org.botbeans.shapes.Abrir-->
+                <attr name="originalFile" stringvalue="Actions/Edit/org-botbeans-shapes-Abrir.instance"/>
+                <attr intvalue="100" name="position"/>
+            </file>
+            <file name="org-botbeans-shapes-ConfigurationAction.shadow">
+                <!--org.botbeans.shapes.ConfigurationAction-->
+                <attr name="originalFile" stringvalue="Actions/Edit/org-botbeans-shapes-ConfigurationAction.instance"/>
+                <attr intvalue="763" name="position"/>
+            </file>
+            <file name="org-botbeans-shapes-Novo.shadow">
+                <!--org.botbeans.shapes.Novo-->
+                <attr name="originalFile" stringvalue="Actions/Edit/org-botbeans-shapes-Novo.instance"/>
+                <attr intvalue="-100" name="position"/>
+            </file>
+        </folder>
+        <folder name="Run">
+            <file name="org-botbeans-shapes-Bottao_debug.shadow">
+                <!--org.botbeans.shapes.Bottao_debug-->
+                <attr name="originalFile" stringvalue="Actions/Edit/org-botbeans-shapes-Bottao_debug.instance"/>
+                <attr intvalue="-45" name="position"/>
+            </file>
+            <file name="org-botbeans-shapes-Bottao_run.shadow">
+                <!--org.botbeans.shapes.Bottao_run-->
+                <attr name="originalFile" stringvalue="Actions/Edit/org-botbeans-shapes-Bottao_run.instance"/>
+                <attr intvalue="-45" name="position"/>
+            </file>
+            <file name="org-botbeans-shapes-Bottao_stop.shadow">
+                <!--org.botbeans.shapes.Bottao_stop-->
+                <attr name="originalFile" stringvalue="Actions/Edit/org-botbeans-shapes-Bottao_stop.instance"/>
+                <attr intvalue="-40" name="position"/>
+            </file>
+        </folder>
+        <folder name="Window">
+            <file name="org-botbeans-shapes-MemoryTopComponent.shadow">
+                <!--org.botbeans.shapes.MemoryTopComponent-->
+                <!--org.botbeans.welcome.WelcomeComponent-->
+                <attr name="originalFile" stringvalue="Actions/Window/org-botbeans-shapes-MemoryTopComponent.instance"/>
+            </file>
+        </folder>
+    </folder>
+    <folder name="Ribbon">
+        <folder name="AppMenu">
+            <file name="org-botbeans-shapes-Abrir.shadow">
+                <!--org.botbeans.shapes.Abrir-->
+                <attr name="originalFile" stringvalue="Actions/Edit/org-botbeans-shapes-Abrir.instance"/>
+                <attr intvalue="-100" name="position"/>
+            </file>
+            <file name="org-botbeans-shapes-Liga.shadow">
+                <!--org.botbeans.shapes.Liga-->
+                <attr name="originalFile" stringvalue="Actions/Edit/org-botbeans-shapes-Liga.instance"/>
+                <attr intvalue="-100" name="position"/>
+            </file>
+            <file name="org-botbeans-shapes-Novo.shadow">
+                <!--org.botbeans.shapes.Novo-->
+                <attr name="originalFile" stringvalue="Actions/Edit/org-botbeans-shapes-Novo.instance"/>
+                <attr intvalue="-100" name="position"/>
+            </file>
+            <folder name="Window">
+                <folder name="Windows">
+                    <file name="org-botbeans-shapes-OpenMemoryAction.shadow">
+                        <!--org.botbeans.shapes.OpenMemoryAction-->
+                        <attr name="originalFile" stringvalue="Actions/File/org-botbeans-shapes-OpenMemoryAction.instance"/>
+                        <attr intvalue="-100" name="position"/>
+                    </file>
+                </folder>
+            </folder>
+        </folder>
+        <folder name="TaskBar">
+            <file name="org-botbeans-shapes-Abrir.shadow">
+                <!--org.botbeans.shapes.Abrir-->
+                <attr name="originalFile" stringvalue="Actions/Edit/org-botbeans-shapes-Abrir.instance"/>
+                <attr intvalue="100" name="position"/>
+            </file>
+            <file name="org-botbeans-shapes-Liga.shadow">
+                <!--org.botbeans.shapes.Liga-->
+                <attr name="originalFile" stringvalue="Actions/Edit/org-botbeans-shapes-Liga.instance"/>
+                <attr intvalue="100" name="position"/>
+            </file>
+            <file name="org-botbeans-shapes-Novo.shadow">
+                <!--org.botbeans.shapes.Novo-->
+                <attr name="originalFile" stringvalue="Actions/Edit/org-botbeans-shapes-Novo.instance"/>
+                <attr intvalue="-100" name="position"/>
+            </file>
+        </folder>
+        <folder name="TaskPanes">
+            <folder name="Main">
+                <folder name="Execution">
+                    <file name="org-botbeans-shapes-Bottao_debug.shadow">
+                        <!--org.botbeans.shapes.Bottao_debug-->
+                        <attr name="originalFile" stringvalue="Actions/Edit/org-botbeans-shapes-Bottao_debug.instance"/>
+                        <attr intvalue="-45" name="position"/>
+                    </file>
+                    <file name="org-botbeans-shapes-Bottao_run.shadow">
+                        <!--org.botbeans.shapes.Bottao_run-->
+                        <attr name="originalFile" stringvalue="Actions/Edit/org-botbeans-shapes-Bottao_run.instance"/>
+                        <attr intvalue="-45" name="position"/>
+                    </file>
+                    <file name="org-botbeans-shapes-Bottao_stop.shadow">
+                        <!--org.botbeans.shapes.Bottao_stop-->
+                        <attr name="originalFile" stringvalue="Actions/Edit/org-botbeans-shapes-Bottao_stop.instance"/>
+                        <attr intvalue="-40" name="position"/>
+                    </file>
+                </folder>
+                <folder name="Edit">
+                    <file name="org-botbeans-shapes-DeleteAction.shadow">
+                        <!--org.botbeans.shapes.DeleteAction-->
+                        <attr name="originalFile" stringvalue="Actions/Edit/org-botbeans-shapes-DeleteAction.instance"/>
+                        <attr intvalue="-950" name="position"/>
+                    </file>
+                </folder>
+            </folder>
+            <folder name="Window">
+                <folder name="Windows">
+                    <file name="org-botbeans-shapes-OpenMemoryAction.shadow">
+                        <!--org.botbeans.shapes.OpenMemoryAction-->
+                        <attr name="originalFile" stringvalue="Actions/File/org-botbeans-shapes-OpenMemoryAction.instance"/>
+                        <attr intvalue="-45" name="position"/>
+                    </file>
+                </folder>
+            </folder>
+        </folder>
+        <folder name="AppMenuFooter">
+            <file name="org-botbeans-shapes-ConfigurationAction.shadow">
+                <!--org.botbeans.shapes.ConfigurationAction-->
+                <attr name="originalFile" stringvalue="Actions/Edit/org-botbeans-shapes-ConfigurationAction.instance"/>
+                <attr intvalue="200" name="position"/>
+            </file>
+        </folder>
+    </folder>
+    <folder name="Toolbars">
+        <folder name="Ficheiro">
+            <file name="org-botbeans-shapes-Abrir.shadow">
+                <!--org.botbeans.shapes.Abrir-->
+                <attr name="originalFile" stringvalue="Actions/Edit/org-botbeans-shapes-Abrir.instance"/>
+                <attr intvalue="-250" name="position"/>
+            </file>
+            <file name="org-botbeans-shapes-Novo.shadow">
+                <!--org.botbeans.shapes.Novo-->
+                <attr name="originalFile" stringvalue="Actions/Edit/org-botbeans-shapes-Novo.instance"/>
+                <attr intvalue="-400" name="position"/>
+            </file>
+        </folder>
+        <folder name="Grafo">
+            <file name="org-botbeans-shapes-Bottao_debug.shadow">
+                <!--org.botbeans.shapes.Bottao_debug-->
+                <attr name="originalFile" stringvalue="Actions/Edit/org-botbeans-shapes-Bottao_debug.instance"/>
+                <attr intvalue="-45" name="position"/>
+            </file>
+            <file name="org-botbeans-shapes-Bottao_run.shadow">
+                <!--org.botbeans.shapes.Bottao_run-->
+                <attr name="originalFile" stringvalue="Actions/Edit/org-botbeans-shapes-Bottao_run.instance"/>
+                <attr intvalue="-45" name="position"/>
+            </file>
+            <file name="org-botbeans-shapes-Bottao_stop.shadow">
+                <!--org.botbeans.shapes.Bottao_stop-->
+                <attr name="originalFile" stringvalue="Actions/Edit/org-botbeans-shapes-Bottao_stop.instance"/>
+                <attr intvalue="-40" name="position"/>
+            </file>
+        </folder>
+        <folder name="Network">
+            <file name="org-botbeans-shapes-ConfigurationAction.shadow">
+                <!--org.botbeans.shapes.ConfigurationAction-->
+                <attr name="originalFile" stringvalue="Actions/Edit/org-botbeans-shapes-ConfigurationAction.instance"/>
+                <attr intvalue="-50" name="position"/>
+            </file>
+            <file name="org-botbeans-shapes-Liga.shadow">
+                <!--org.botbeans.shapes.Liga-->
+                <attr name="originalFile" stringvalue="Actions/Edit/org-botbeans-shapes-Liga.instance"/>
+                <attr intvalue="-100" name="position"/>
+            </file>
+        </folder>
+        <folder name="Editar">
+            <file name="org-botbeans-shapes-DeleteAction.shadow">
+                <!--org.botbeans.shapes.DeleteAction-->
+                <attr name="originalFile" stringvalue="Actions/Edit/org-botbeans-shapes-DeleteAction.instance"/>
+                <attr intvalue="-950" name="position"/>
+            </file>
+        </folder>
+    </folder>
+    <folder name="Shortcuts">
+        <file name="DELETE.shadow">
+            <!--org.botbeans.shapes.DeleteAction-->
+            <attr name="originalFile" stringvalue="Actions/Edit/org-botbeans-shapes-DeleteAction.instance"/>
+        </file>
+    </folder>
+    <folder name="Windows2">
+        <folder name="Components">
+            <file name="MemoryTopComponent.settings">
+                <!--org.botbeans.shapes.MemoryTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="org.botbeans.shapes.MemoryTopComponent"/>
+</settings>
+]]></file>
+            <file name="ShapeTopComponent.settings">
+                <!--org.botbeans.shapes.ShapeTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="org.botbeans.shapes.ShapeTopComponent"/>
+</settings>
+]]></file>
+            <file name="WelcomeComponent.settings">
+                <!--org.botbeans.welcome.WelcomeComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="org.botbeans.welcome.WelcomeComponent"/>
+</settings>
+]]></file>
+        </folder>
+        <folder name="Modes">
+            <folder name="properties">
+                <file name="MemoryTopComponent.wstcref">
+                    <!--org.botbeans.shapes.MemoryTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="MemoryTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+            </folder>
+            <folder name="editor">
+                <file name="ShapeTopComponent.wstcref">
+                    <!--org.botbeans.shapes.ShapeTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="ShapeTopComponent"/>
+  <state opened="true"/>
+</tc-ref>
+]]></file>
+                <file name="WelcomeComponent.wstcref">
+                    <!--org.botbeans.welcome.WelcomeComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="WelcomeComponent"/>
+  <state opened="true"/>
+</tc-ref>
+]]></file>
+            </folder>
+        </folder>
+    </folder>
+    <folder name="xml">
+        <folder name="entities">
+            <folder name="org_botbeans_shapes">
+                <file name="Memory" url="nbres:/org/netbeans/modules/settings/resources/properties-1_0.dtd">
+                    <!--org.botbeans.shapes.MemoryTopComponent-->
+                    <!--org.botbeans.shapes.ShapeTopComponent-->
+                    <!--org.botbeans.welcome.WelcomeComponent-->
+                    <attr name="hint.originalPublicID" stringvalue="-//org.botbeans.shapes//Memory//EN"/>
+                </file>
+            </folder>
+        </folder>
+        <folder name="memory">
+            <folder name="org">
+                <folder name="botbeans">
+                    <folder name="shapes">
+                        <file name="MemoryTopComponent">
+                            <!--org.botbeans.shapes.MemoryTopComponent-->
+                            <attr name="settings.providerPath" stringvalue="xml/lookups//org_botbeans_shapes/Memory.instance"/>
+                        </file>
+                        <file name="ShapeTopComponent">
+                            <!--org.botbeans.shapes.ShapeTopComponent-->
+                            <attr name="settings.providerPath" stringvalue="xml/lookups//org_botbeans_shapes/Memory.instance"/>
+                        </file>
+                    </folder>
+                    <folder name="welcome">
+                        <file name="WelcomeComponent">
+                            <!--org.botbeans.welcome.WelcomeComponent-->
+                            <attr name="settings.providerPath" stringvalue="xml/lookups//org_botbeans_shapes/Memory.instance"/>
+                        </file>
+                    </folder>
+                </folder>
+            </folder>
+        </folder>
+        <folder name="lookups">
+            <folder name="org_botbeans_shapes">
+                <file name="Memory.instance">
+                    <!--org.botbeans.shapes.MemoryTopComponent-->
+                    <!--org.botbeans.shapes.ShapeTopComponent-->
+                    <!--org.botbeans.welcome.WelcomeComponent-->
+                    <attr
+                        methodvalue="org.netbeans.api.settings.Factory.create" name="instanceCreate"/>
+                    <attr
+                        methodvalue="org.netbeans.api.settings.Factory.properties" name="settings.convertor"/>
+                    <attr name="settings.instanceClass" stringvalue="org.botbeans.welcome.WelcomeComponent"/>
+                    <attr name="settings.instanceOf" stringvalue="org.botbeans.welcome.WelcomeComponent"/>
+                    <attr boolvalue="true" name="xmlproperties.preventStoring"/>
+                </file>
+            </folder>
+        </folder>
+    </folder>
+</filesystem>

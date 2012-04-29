@@ -1,5 +1,0 @@
-#!/bin/bash
-nxjc *.java
-nxjlink Main -o Main.nxj
-nxjupload -b -d 00:16:53:04:9F:82 Main.nxj
-

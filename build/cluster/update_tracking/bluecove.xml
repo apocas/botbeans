@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module codename="bluecove">
+    <module_version install_time="1335729201910" last="true" origin="installer" specification_version="1.0">
+        <file crc="1077260955" name="config/Modules/bluecove.xml"/>
+        <file crc="2276829598" name="modules/bluecove.jar"/>
+        <file crc="689909513" name="modules/ext/bluecove-2.1.1-SNAPSHOT.jar"/>
+        <file crc="515661820" name="modules/ext/bluecove-gpl-2.1.1-SNAPSHOT.jar"/>
+    </module_version>
+</module>

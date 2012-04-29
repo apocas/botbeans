@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+OpenIDE-Module: org.botbeans.common
+OpenIDE-Module-Layer: org/botbeans/common/layer.xml
+OpenIDE-Module-Localizing-Bundle: org/botbeans/common/Bundle.properties
+OpenIDE-Module-Specification-Version: 1.0
+

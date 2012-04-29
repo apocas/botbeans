@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module codename="org.botbeans.shapes">
+    <module_version install_time="1335729204552" last="true" origin="installer" specification_version="1.0">
+        <file crc="665074393" name="config/Modules/org-botbeans-shapes.xml"/>
+        <file crc="3401557431" name="modules/org-botbeans-shapes.jar"/>
+    </module_version>
+</module>

@@ -1,0 +1,8 @@
+/Applications/NetBeans/NetBeans 7.1.2.app/Contents/Resources/NetBeans/platform=1335563835000
+/Users/pedrodias/Documents/Github/botbeans/BotBeans/build/cluster=1335729205000
+/Applications/NetBeans/NetBeans 7.1.2.app/Contents/Resources/NetBeans/ide=1334084548000
+/Applications/NetBeans/NetBeans 7.1.2.app/Contents/Resources/NetBeans/platform=1335563835000
+/Users/pedrodias/Documents/Github/botbeans/BotBeans/build/testuserdir=1335729205000
+crc=7
+locale=en_US
+branding=botbeans
