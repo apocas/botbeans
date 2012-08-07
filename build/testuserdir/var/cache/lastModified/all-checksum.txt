@@ -1,8 +1,0 @@
-home=1343162208000
-cluster=1344380687000
-ide=1342532824000
-platform=1343162208000
-user=1344380687000
-crc=7
-locale=en_US
-branding=botbeans

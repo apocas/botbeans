@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<module codename="org.jcommon">
-    <module_version install_time="1344380686586" last="true" origin="installer" specification_version="1.0">
-        <file crc="1212867586" name="config/Modules/org-jcommon.xml"/>
-        <file crc="2035512765" name="modules/ext/jcommon-1.0.0-rc1.jar"/>
-        <file crc="325090158" name="modules/org-jcommon.jar"/>
-    </module_version>
-</module>
