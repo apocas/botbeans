@@ -3,10 +3,6 @@
 <attributes version="1.0">
     <fileobject name="commonpalette">
         <attr name="WinSys-TCRef-Order" stringvalue="CommonPalette"/>
-        <attr name="_palette_visible_" boolvalue="true"/>
-    </fileobject>
-    <fileobject name="editor">
-        <attr name="WinSys-TCRef-Order" stringvalue="WelcomeComponent"/>
     </fileobject>
     <fileobject name="explorer">
         <attr name="WinSys-TCRef-Order" stringvalue="ServerTopComponent/favorites"/>

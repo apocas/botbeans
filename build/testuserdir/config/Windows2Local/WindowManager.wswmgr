@@ -3,10 +3,10 @@
 <windowmanager version="2.1">
     <main-window>
   <joined-properties
-   x="63"
-   y="62"
+   x="64"
+   y="68"
    width="1152"
-   height="660"
+   height="664"
    relative-x="0.0"
    relative-y="0.0"
    relative-width="0.0"
@@ -21,7 +21,7 @@
    x="128"
    y="73"
    width="1024"
-   height="58"
+   height="59"
    relative-x="0.0"
    relative-y="0.0"
    relative-width="0.0"
@@ -37,12 +37,8 @@
   <path orientation="vertical" number="40" weight="0.7" />
   <path orientation="horizontal" number="40" weight="0.7" />
   </constraints>
-  <bounds x="422" y="176" width="537" height="322" />
+  <bounds x="422" y="177" width="537" height="324" />
     </editor-area>
     <screen width="1280" height="800"/>
-    <active-mode name="editor"/>
     <toolbar configuration="Standard" preferred-icon-size="24"/>
-    <tc-list>
-  <tc-id id="WelcomeComponent"/>
-    </tc-list>
 </windowmanager>

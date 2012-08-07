@@ -11,8 +11,7 @@
     <path orientation="horizontal" number="80" weight="0.3"/>
     <path orientation="vertical" number="40" weight="0.5"/>
   </constraints>
-  <bounds x="960" y="176" width="192" height="234" />
+  <bounds x="960" y="177" width="192" height="236" />
   <frame state="0"/>
-    <active-tc  id="CommonPalette" />
     <empty-behavior permanent="true"/>
 </mode>
