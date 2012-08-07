@@ -1,5 +1,9 @@
 Botbeans
 
+![Botbeans1](http://botbeans.com/assets/img/botbeans1.png)
+
+![Botbeans2](http://botbeans.com/assets/img/botbeans1.png)
+
 External libraries:  
 http://lejos.sourceforge.net/  
 http://platform.netbeans.org/  
